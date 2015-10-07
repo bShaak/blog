@@ -11,15 +11,23 @@
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
-      <a href="#" class="name">Braden Shaak</a>
-      <nav>
-        <%= link_to "Articles", posts_path %>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+    <%= link_to "Braden Shaak", root_path, class: "name" %>
+    <nav>
+      <%= link_to "Articles", posts_path %>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<%= yield %>
+  <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy; 2015 Braden Shaak</p>
+    <nav>
+      <a href="https://twitter.com/beedsafehavefun" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/bshaak", target="_blank"><i class="fa fa-github"></i></a>
+    </nav>
+  </footer>
 
 </body>
 </html>
