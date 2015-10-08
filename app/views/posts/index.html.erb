@@ -1,1 +1,31 @@
-<h1>Hello World</h1>
+<h1 id="page_title">Articles</h1>
+
+  <div id="posts_wrapper" class="skinny_wrapper">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <p class="date"><%= post.created_at.strftime('%A, %B, %d') %></p>
+        <h2> <a href="#"><%= link_to post.title, post %></a></p>
+        <hr>
+      </div>
+    <% end %>
+
+
+    <div class="post">
+      <p class="date">Monday September, 28th</p>
+      <h2> <a href="#">Article 2</a></p>
+      <hr>
+    </div>
+
+    <div class="post">
+      <p class="date">Monday September, 28th</p>
+      <h2> <a href="#">Article 3</a></p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <span class="previous_page disabled">Previous</span>
+    <em class="current">1</em>
+    <a rel="next" href="#">2</a>
+    <a class="next_page" href="#">Next</a>
+  </div>
